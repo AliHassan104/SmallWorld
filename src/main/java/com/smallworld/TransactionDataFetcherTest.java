@@ -27,12 +27,13 @@ public class TransactionDataFetcherTest {
         Assert.assertEquals(4371.37, totalAmount, 0);
     }
 
-
     @Test
-    public void testGetTotalTransactionAmountSentBy() {
+    public void testGetTotalTransactionAmountSentByTomShelby() {
         TransactionDataFetcher dataFetcher = new TransactionDataFetcher();
-        double totalAmount = dataFetcher.getTotalTransactionAmountSentBy("Tom Shelby");
-        Assert.assertEquals(828.26, totalAmount, 0);
+        double tomShelbyAmount = dataFetcher.getTotalTransactionAmountSentBy("Tom Shelby");
+        Assert.assertEquals(828.26, tomShelbyAmount, 0);
+        double auntPollyAmount = dataFetcher.getTotalTransactionAmountSentBy("Aunt Polly");
+        Assert.assertEquals(101.02, auntPollyAmount, 0);
     }
 
     @Test
